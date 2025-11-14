@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import BookingSystem from './components/BookingSystem'
 
 function App() {
   return (
@@ -112,6 +113,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Sistema de Reservas */}
+      <BookingSystem />
 
       {/* Contacto Section */}
       <section id="contacto" className="contacto">
