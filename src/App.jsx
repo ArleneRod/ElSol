@@ -1,36 +1,76 @@
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="app">
-      {/* Decorative Border Top */}
-      <div className="vintage-border-top"></div>
+      {/* Header único con navegación a la izquierda */}
+      <header className={`header-modern ${scrolled ? 'scrolled' : ''}`}>
+        <div className="header-container">
+          {/* Navegación a la izquierda */}
+          <nav className="nav-modern">
+            <Link
+              to="/"
+              className={`nav-button ${location.pathname === '/' ? 'active' : ''}`}
+            >
+              <span className="nav-icon">🏠</span>
+              <span className="nav-text">Inicio</span>
+              <div className="nav-indicator"></div>
+            </Link>
 
-      {/* Header/Navbar */}
-      <header className="header">
-        <div className="container">
-          <Link to="/" className="logo-section-link">
-            <div className="logo-section">
-              <div className="sun-decoration">
-                <div className="sun-rays"></div>
-                <div className="sun-circle">☀</div>
-              </div>
-              <div className="logo-text">
-                <h1>El Sol</h1>
-                <div className="ornament">✦ ✦ ✦</div>
-                <p className="tagline">Peluquería & Spa</p>
-              </div>
-            </div>
-          </Link>
-          <nav className="nav">
-            <Link to="/">Inicio</Link>
-            <span className="nav-dot">•</span>
-            <a href="/#servicios">Servicios</a>
-            <span className="nav-dot">•</span>
-            <a href="/#contacto">Contacto</a>
-            <Link to="/reservas" className="btn-cita">Reservar</Link>
+            <a
+              href="/#servicios"
+              className="nav-button"
+            >
+              <span className="nav-icon">✂</span>
+              <span className="nav-text">Servicios</span>
+              <div className="nav-indicator"></div>
+            </a>
+
+            <Link
+              to="/reservas"
+              className={`nav-button ${location.pathname === '/reservas' ? 'active' : ''}`}
+            >
+              <span className="nav-icon">📅</span>
+              <span className="nav-text">Reservas</span>
+              <div className="nav-indicator"></div>
+            </Link>
+
+            <a
+              href="/#contacto"
+              className="nav-button"
+            >
+              <span className="nav-icon">📍</span>
+              <span className="nav-text">Contacto</span>
+              <div className="nav-indicator"></div>
+            </a>
           </nav>
+
+          {/* Logo centrado */}
+          <Link to="/" className="logo-modern">
+            <div className="logo-icon">☀</div>
+            <div className="logo-name">El Sol</div>
+          </Link>
+
+          {/* CTA a la derecha */}
+          <div className="header-cta">
+            <Link to="/reservas" className="btn-cta-modern">
+              Agendar
+              <span className="btn-arrow">→</span>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -48,9 +88,6 @@ function App() {
         </div>
         <div className="footer-ornament">✤ ✦ ✤</div>
       </footer>
-
-      {/* Decorative Border Bottom */}
-      <div className="vintage-border-bottom"></div>
     </div>
   )
 }
