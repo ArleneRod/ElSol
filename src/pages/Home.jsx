@@ -35,7 +35,7 @@ function Home() {
           </div>
 
           <div className="servicios-vintage">
-            <div className="servicio-card vintage-card-1">
+            <Link to="/servicios/corte" className="servicio-card vintage-card-1">
               <div className="card-border"></div>
               <div className="servicio-icon">✂</div>
               <h3>Corte de Cabello</h3>
@@ -45,9 +45,9 @@ function Home() {
               <div className="card-corner tr"></div>
               <div className="card-corner bl"></div>
               <div className="card-corner br"></div>
-            </div>
+            </Link>
 
-            <div className="servicio-card vintage-card-2">
+            <Link to="/servicios/spa" className="servicio-card vintage-card-2">
               <div className="card-border"></div>
               <div className="servicio-icon">✾</div>
               <h3>Tratamientos Spa</h3>
@@ -57,9 +57,9 @@ function Home() {
               <div className="card-corner tr"></div>
               <div className="card-corner bl"></div>
               <div className="card-corner br"></div>
-            </div>
+            </Link>
 
-            <div className="servicio-card vintage-card-3">
+            <Link to="/servicios/manicure" className="servicio-card vintage-card-3">
               <div className="card-border"></div>
               <div className="servicio-icon">✿</div>
               <h3>Manicure & Pedicure</h3>
@@ -69,9 +69,9 @@ function Home() {
               <div className="card-corner tr"></div>
               <div className="card-corner bl"></div>
               <div className="card-corner br"></div>
-            </div>
+            </Link>
 
-            <div className="servicio-card vintage-card-4">
+            <Link to="/servicios/coloracion" className="servicio-card vintage-card-4">
               <div className="card-border"></div>
               <div className="servicio-icon">❋</div>
               <h3>Coloración</h3>
@@ -81,7 +81,7 @@ function Home() {
               <div className="card-corner tr"></div>
               <div className="card-corner bl"></div>
               <div className="card-corner br"></div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
