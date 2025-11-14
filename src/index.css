@@ -7,21 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap');
 
 :root {
-  /* Paleta Vintage Retro */
-  --golden-sun: #DAA520;
-  --burnt-orange: #CC6600;
-  --mustard: #D4A574;
-  --cream: #F5F5DC;
-  --warm-brown: #8B4513;
-  --deep-brown: #654321;
-  --soft-pink: #E8B4B8;
-  --sage-green: #9CA986;
-  --vintage-white: #FAF9F6;
-  --charcoal: #36454F;
+  /* Paleta Fría Moderna */
+  --deep-purple: #6B4C9A;
+  --lavender: #9B7EBD;
+  --light-lavender: #C8B6E2;
+  --pale-purple: #E6DFF0;
+  --cool-white: #F8F7FC;
+  --silver-gray: #B8B5C3;
+  --slate: #4A4556;
+  --ice-blue: #E8EEFF;
+  --soft-mauve: #D4C5E8;
+  --charcoal: #2D2833;
 
-  /* Sombras vintage */
-  --shadow-soft: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  --shadow-deep: 8px 8px 0px rgba(0, 0, 0, 0.15);
+  /* Sombras suaves */
+  --shadow-soft: 4px 4px 0px rgba(107, 76, 154, 0.1);
+  --shadow-deep: 8px 8px 0px rgba(107, 76, 154, 0.15);
 }
 
 body {
@@ -30,14 +30,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
   color: var(--charcoal);
-  background: var(--cream);
+  background: var(--cool-white);
   background-image:
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(218, 165, 32, 0.03) 2px,
-      rgba(218, 165, 32, 0.03) 4px
+      rgba(107, 76, 154, 0.02) 2px,
+      rgba(107, 76, 154, 0.02) 4px
     );
 }
 

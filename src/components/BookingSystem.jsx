@@ -154,7 +154,7 @@ function BookingSystem() {
     setFormData({ name: '', phone: '', email: '' })
     setShowForm(false)
 
-    alert('¡Reserva confirmada! Te esperamos 🌟')
+    alert('¡Reserva confirmada! Te esperamos.')
   }
 
   // Cancelar reserva (admin)
@@ -189,7 +189,7 @@ function BookingSystem() {
           className="admin-toggle"
           onClick={() => setShowAdmin(!showAdmin)}
         >
-          {showAdmin ? '📅 Ver Calendario' : '⚙️ Admin'}
+          {showAdmin ? 'Ver Calendario' : 'Admin'}
         </button>
 
         {showAdmin ? (
@@ -211,9 +211,9 @@ function BookingSystem() {
                         </div>
                         <div className="booking-details">
                           <h4>{booking.name}</h4>
-                          <p>📞 {booking.phone}</p>
-                          {booking.email && <p>✉️ {booking.email}</p>}
-                          <p className="service-tag">✂ {booking.serviceName}</p>
+                          <p>{booking.phone}</p>
+                          {booking.email && <p>{booking.email}</p>}
+                          <p className="service-tag">{booking.serviceName}</p>
                         </div>
                       </div>
                       <button
@@ -337,10 +337,10 @@ function BookingSystem() {
 
                   <div className="booking-summary">
                     <h4>Resumen de tu reserva:</h4>
-                    <p>📅 {formatDate(selectedDate)}</p>
-                    <p>🕐 {selectedTime}</p>
+                    <p><strong>Fecha:</strong> {formatDate(selectedDate)}</p>
+                    <p><strong>Hora:</strong> {selectedTime}</p>
                     {selectedService && (
-                      <p>✂ {services.find(s => s.id === selectedService)?.name}</p>
+                      <p><strong>Servicio:</strong> {services.find(s => s.id === selectedService)?.name}</p>
                     )}
                   </div>
 
@@ -355,7 +355,7 @@ function BookingSystem() {
         )}
 
         <div className="booking-note">
-          <p>💡 <strong>Horarios:</strong> Mar-Vie 10am-5pm | Sáb-Dom 12pm-5pm | Lunes cerrado</p>
+          <p><strong>Horarios:</strong> Mar-Vie 10am-5pm | Sáb-Dom 12pm-5pm | Lunes cerrado</p>
         </div>
       </div>
     </section>
