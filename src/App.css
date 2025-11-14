@@ -40,7 +40,7 @@
 .header {
   background: var(--cool-white);
   padding: 2rem 0;
-  border-bottom: 3px double var(--lavender);
+  border-bottom: 1px solid var(--silver-gray);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -228,7 +228,7 @@
   margin: 0 auto;
   padding: 4rem;
   background: var(--cool-white);
-  border: 3px solid var(--lavender);
+  border: none;
   box-shadow:
     var(--shadow-deep),
     inset 0 0 0 8px var(--cool-white),
@@ -291,7 +291,7 @@
 .btn-primary {
   background: var(--deep-purple);
   color: var(--cool-white);
-  border: 3px solid var(--deep-purple);
+  border: 2px solid var(--deep-purple);
   padding: 1rem 3rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -369,8 +369,12 @@
   padding: 3rem 2rem;
   text-align: center;
   position: relative;
-  border: 2px solid var(--light-lavender);
+  border: none;
   transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .card-border {
@@ -477,7 +481,7 @@
   margin: 0 auto;
   background: var(--cool-white);
   padding: 4rem 3rem;
-  border: 4px double var(--deep-purple);
+  border: none;
   box-shadow: var(--shadow-deep);
   position: relative;
 }
@@ -516,7 +520,7 @@
   text-align: center;
   padding: 2rem 1rem;
   background: var(--pale-purple);
-  border: 2px solid var(--light-lavender);
+  border: none;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -770,3 +774,62 @@
 .servicio-card:nth-child(2) { animation-delay: 0.2s; }
 .servicio-card:nth-child(3) { animation-delay: 0.3s; }
 .servicio-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ========================================
+   MODERN iOS STYLE OVERRIDES
+   ======================================== */
+
+.servicio-card {
+  border-radius: 16px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.servicio-card:hover {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.hero-frame {
+  border-radius: 24px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+  border-radius: 12px !important;
+}
+
+.btn-cita {
+  border-radius: 12px !important;
+}
+
+.contacto-frame {
+  border-radius: 20px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.info-box {
+  border-radius: 12px !important;
+  border: 1px solid var(--silver-gray) !important;
+}
+
+.header {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+.service-item {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.service-item:hover {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.package-item {
+  border-radius: 16px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-reserve {
+  border-radius: 10px !important;
+}

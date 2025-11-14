@@ -7,21 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap');
 
 :root {
-  /* Paleta Fría Moderna */
-  --deep-purple: #6B4C9A;
-  --lavender: #9B7EBD;
-  --light-lavender: #C8B6E2;
-  --pale-purple: #E6DFF0;
-  --cool-white: #F8F7FC;
-  --silver-gray: #B8B5C3;
-  --slate: #4A4556;
-  --ice-blue: #E8EEFF;
-  --soft-mauve: #D4C5E8;
-  --charcoal: #2D2833;
+  /* Paleta Estilo Podcasts iPhone */
+  --deep-purple: #8E44AD;
+  --lavender: #9B59B6;
+  --light-lavender: #BF9FD4;
+  --pale-purple: #F4ECF7;
+  --cool-white: #FFFFFF;
+  --silver-gray: #E0E0E0;
+  --slate: #5A5A5A;
+  --ice-blue: #F5F5F5;
+  --soft-mauve: #E8DAEF;
+  --charcoal: #1A1A1A;
 
   /* Sombras suaves */
-  --shadow-soft: 4px 4px 0px rgba(107, 76, 154, 0.1);
-  --shadow-deep: 8px 8px 0px rgba(107, 76, 154, 0.15);
+  --shadow-soft: 0 4px 12px rgba(142, 68, 173, 0.15);
+  --shadow-deep: 0 8px 24px rgba(142, 68, 173, 0.25);
 }
 
 body {
@@ -30,15 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
   color: var(--charcoal);
-  background: var(--cool-white);
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(107, 76, 154, 0.02) 2px,
-      rgba(107, 76, 154, 0.02) 4px
-    );
+  background: var(--ice-blue);
 }
 
 html {
