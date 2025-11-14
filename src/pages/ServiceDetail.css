@@ -354,3 +354,49 @@
     padding: 1rem 1.5rem;
   }
 }
+
+/* ========================================
+   MODERN iOS STYLE OVERRIDES
+   ======================================== */
+
+.service-item {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.service-item:hover {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.package-item {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.package-item:hover {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.btn-reserve {
+  border-radius: 10px !important;
+}
+
+.extra-item {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.extra-item:hover {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.12) !important;
+}
+
+.service-note {
+  border-radius: 12px !important;
+  border: none !important;
+  border-left: 4px solid var(--lavender) !important;
+  background: var(--cool-white) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}

@@ -601,3 +601,81 @@
 .booking-form {
   animation: slideIn 0.4s ease-out;
 }
+
+/* ========================================
+   MODERN iOS STYLE OVERRIDES
+   ======================================== */
+
+.date-card {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.date-card:hover {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.15) !important;
+}
+
+.date-card.selected {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.25) !important;
+}
+
+.time-slot {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.time-slot:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.15) !important;
+}
+
+.time-slot.selected {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.25) !important;
+}
+
+.booking-form,
+.date-selector,
+.time-selector {
+  border-radius: 20px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.admin-panel {
+  border-radius: 20px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.booking-item {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.booking-item:hover {
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.15) !important;
+}
+
+.btn-confirm {
+  border-radius: 12px !important;
+}
+
+.admin-toggle {
+  border-radius: 10px !important;
+}
+
+.btn-cancel {
+  border-radius: 10px !important;
+}
+
+.form-group input,
+.form-group select {
+  border-radius: 10px !important;
+  border: 1px solid var(--silver-gray) !important;
+}
+
+.booking-summary {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
