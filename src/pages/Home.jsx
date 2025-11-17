@@ -108,59 +108,57 @@ function Home() {
         </div>
       </section>
 
-      {/* Servicios Section - Grid Asimétrico */}
-      <section id="servicios" className="servicios-modern">
-        <div className="container-modern">
-          <div className="section-title-wrapper">
-            <h2 className="section-title-modern">
-              <span className="title-line"></span>
-              Nuestros Servicios
-              <span className="title-line"></span>
-            </h2>
-          </div>
+      {/* Servicios Section - Showcase Editorial */}
+      <section id="servicios" className="servicios-showcase">
+        <div className="showcase-header">
+          <span className="showcase-label">Servicios</span>
+          <h2 className="showcase-title">Lo que hacemos</h2>
+        </div>
 
-          {/* Grid asimétrico - NO 4 columnas iguales */}
-          <div className="services-asymmetric-grid">
-            {/* Card Grande - Principal */}
-            <Link to="/servicios/corte" className="service-card-modern large" data-tilt>
-              <div className="card-glow"></div>
-              <div className="card-glass-layer"></div>
-              <div className="service-icon-modern">✂</div>
-              <h3>Corte de Cabello</h3>
-              <p>Estilos únicos para cada personalidad</p>
-              <div className="card-hover-indicator">→</div>
-            </Link>
+        <div className="showcase-list">
+          <Link to="/servicios/corte" className="showcase-item">
+            <span className="showcase-number">01</span>
+            <div className="showcase-content">
+              <h3 className="showcase-name">Corte de Cabello</h3>
+              <p className="showcase-desc">Estilos únicos para cada personalidad</p>
+            </div>
+            <div className="showcase-arrow">
+              <span className="arrow-line"></span>
+            </div>
+          </Link>
 
-            {/* Card Mediana */}
-            <Link to="/servicios/spa" className="service-card-modern medium" data-tilt>
-              <div className="card-glow"></div>
-              <div className="card-glass-layer"></div>
-              <div className="service-icon-modern">✾</div>
-              <h3>Tratamientos Spa</h3>
-              <p>Relajación y renovación profunda</p>
-              <div className="card-hover-indicator">→</div>
-            </Link>
+          <Link to="/servicios/spa" className="showcase-item">
+            <span className="showcase-number">02</span>
+            <div className="showcase-content">
+              <h3 className="showcase-name">Tratamientos Spa</h3>
+              <p className="showcase-desc">Relajación y renovación profunda</p>
+            </div>
+            <div className="showcase-arrow">
+              <span className="arrow-line"></span>
+            </div>
+          </Link>
 
-            {/* Card Pequeña */}
-            <Link to="/servicios/manicure" className="service-card-modern small" data-tilt>
-              <div className="card-glow"></div>
-              <div className="card-glass-layer"></div>
-              <div className="service-icon-modern">✿</div>
-              <h3>Manicure</h3>
-              <p>Manos perfectas</p>
-              <div className="card-hover-indicator">→</div>
-            </Link>
+          <Link to="/servicios/manicure" className="showcase-item">
+            <span className="showcase-number">03</span>
+            <div className="showcase-content">
+              <h3 className="showcase-name">Manicure & Pedicure</h3>
+              <p className="showcase-desc">Manos y pies perfectos</p>
+            </div>
+            <div className="showcase-arrow">
+              <span className="arrow-line"></span>
+            </div>
+          </Link>
 
-            {/* Card Mediana 2 */}
-            <Link to="/servicios/coloracion" className="service-card-modern medium-2" data-tilt>
-              <div className="card-glow"></div>
-              <div className="card-glass-layer"></div>
-              <div className="service-icon-modern">❋</div>
-              <h3>Coloración</h3>
-              <p>Arte en tu cabello</p>
-              <div className="card-hover-indicator">→</div>
-            </Link>
-          </div>
+          <Link to="/servicios/coloracion" className="showcase-item">
+            <span className="showcase-number">04</span>
+            <div className="showcase-content">
+              <h3 className="showcase-name">Coloración</h3>
+              <p className="showcase-desc">Arte y color en tu cabello</p>
+            </div>
+            <div className="showcase-arrow">
+              <span className="arrow-line"></span>
+            </div>
+          </Link>
         </div>
       </section>
 
