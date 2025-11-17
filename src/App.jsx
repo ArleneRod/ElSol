@@ -25,50 +25,45 @@ function App() {
               to="/"
               className={`nav-button ${location.pathname === '/' ? 'active' : ''}`}
             >
-              <span className="nav-icon">🏠</span>
               <span className="nav-text">Inicio</span>
-              <div className="nav-indicator"></div>
+              <div className="nav-underline"></div>
             </Link>
 
             <a
               href="/#servicios"
               className="nav-button"
             >
-              <span className="nav-icon">✂</span>
               <span className="nav-text">Servicios</span>
-              <div className="nav-indicator"></div>
+              <div className="nav-underline"></div>
             </a>
 
             <Link
               to="/reservas"
               className={`nav-button ${location.pathname === '/reservas' ? 'active' : ''}`}
             >
-              <span className="nav-icon">📅</span>
               <span className="nav-text">Reservas</span>
-              <div className="nav-indicator"></div>
+              <div className="nav-underline"></div>
             </Link>
 
             <a
               href="/#contacto"
               className="nav-button"
             >
-              <span className="nav-icon">📍</span>
               <span className="nav-text">Contacto</span>
-              <div className="nav-indicator"></div>
+              <div className="nav-underline"></div>
             </a>
           </nav>
 
           {/* Logo centrado */}
           <Link to="/" className="logo-modern">
-            <div className="logo-icon">☀</div>
             <div className="logo-name">El Sol</div>
+            <div className="logo-tagline">Peluquería & Spa</div>
           </Link>
 
           {/* CTA a la derecha */}
           <div className="header-cta">
             <Link to="/reservas" className="btn-cta-modern">
-              Agendar
-              <span className="btn-arrow">→</span>
+              <span>Agendar Cita</span>
             </Link>
           </div>
         </div>

@@ -1446,68 +1446,57 @@
 /* Navegación a la Izquierda */
 .nav-modern {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .nav-button {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
   background: transparent;
   border: none;
-  border-radius: 12px;
   text-decoration: none;
-  color: var(--charcoal);
+  color: var(--slate);
   font-weight: 500;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
   cursor: pointer;
-  overflow: hidden;
-}
-
-.nav-icon {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
 }
 
 .nav-text {
   position: relative;
+  display: inline-block;
 }
 
-.nav-indicator {
+.nav-underline {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 24px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--deep-purple), var(--lavender));
-  border-radius: 3px 3px 0 0;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  bottom: 0.6rem;
+  left: 1.8rem;
+  right: 1.8rem;
+  height: 2px;
+  background: var(--deep-purple);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .nav-button:hover {
-  background: rgba(142, 68, 173, 0.08);
-  transform: translateY(-2px);
-}
-
-.nav-button:hover .nav-icon {
-  transform: scale(1.15) rotate(5deg);
-}
-
-.nav-button:hover .nav-indicator {
-  transform: translateX(-50%) scaleX(1);
-}
-
-.nav-button.active {
-  background: rgba(142, 68, 173, 0.12);
   color: var(--deep-purple);
 }
 
-.nav-button.active .nav-indicator {
-  transform: translateX(-50%) scaleX(1);
+.nav-button:hover .nav-underline {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-button.active {
+  color: var(--deep-purple);
+  font-weight: 600;
+}
+
+.nav-button.active .nav-underline {
+  transform: scaleX(1);
 }
 
 /* Logo Centrado */
@@ -1516,32 +1505,50 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.logo-modern::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(142, 68, 173, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.logo-modern:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .logo-modern:hover {
-  transform: scale(1.05);
-}
-
-.logo-icon {
-  font-size: 2.5rem;
-  line-height: 1;
-  filter: drop-shadow(0 2px 8px rgba(142, 68, 173, 0.3));
-  animation: rotate-slow 20s linear infinite;
-}
-
-@keyframes rotate-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  transform: translateY(-2px);
 }
 
 .logo-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: var(--deep-purple);
-  margin-top: 0.2rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--slate);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
 }
 
 /* CTA a la Derecha */
@@ -1553,16 +1560,16 @@
 .btn-cta-modern {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.9rem 2rem;
-  background: linear-gradient(135deg, var(--deep-purple), var(--lavender));
+  padding: 0.85rem 2.2rem;
+  background: var(--deep-purple);
   color: #FFFFFF;
   text-decoration: none;
-  border-radius: 16px;
-  font-weight: 600;
-  font-size: 1rem;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(142, 68, 173, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -1570,29 +1577,21 @@
 .btn-cta-modern::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--lavender), var(--light-lavender));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--lavender);
+  transition: left 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .btn-cta-modern:hover::before {
-  opacity: 1;
+  left: 0;
 }
 
 .btn-cta-modern:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(142, 68, 173, 0.4);
-}
-
-.btn-arrow {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-cta-modern:hover .btn-arrow {
-  transform: translateX(4px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 68, 173, 0.35);
 }
 
 .btn-cta-modern > * {
@@ -1632,21 +1631,29 @@
   .nav-modern {
     order: 3;
     width: 100%;
+    justify-content: center;
   }
 
   .nav-button {
-    flex: 1;
-    justify-content: center;
-    padding: 0.7rem 1rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 
-  .nav-text {
-    display: none;
+  .nav-underline {
+    left: 1rem;
+    right: 1rem;
   }
 
   .logo-modern {
     order: 1;
+  }
+
+  .logo-name {
+    font-size: 1.5rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.6rem;
   }
 
   .header-cta {
@@ -1655,8 +1662,8 @@
   }
 
   .btn-cta-modern {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.8rem;
   }
 }
 
